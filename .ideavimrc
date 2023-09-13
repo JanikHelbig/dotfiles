@@ -1,0 +1,27 @@
+let mapleader = " "
+
+set highlightedyank
+set vim-commentary
+
+set scrolloff=8
+set relativenumber number
+set showmode
+set showcmd
+set visualbell
+set clipboard+=unnamed
+
+set ignorecase
+set smartcase
+set incsearch
+set hlsearch
+
+" Don't use Ex mode, use Q for formatting.
+map Q gq
+
+map <leader>c <action>(CommentByLineComment)
+map <leader>fa <action>(SearchEverywhere)
+map <leader>ff <action>(GotoFile)
+map <leader>fs <action>(GotoSymbol)
+map <leader>rr <action>(RenameElement)
+map <leader>ri <action>(Inline)
+
