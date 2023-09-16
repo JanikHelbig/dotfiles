@@ -1,3 +1,4 @@
+.wezterm.lua|symlink|
 .gitconfig|symlink|
 .ideavimrc|symlink|
 nvim|symlink|.config
