@@ -2,6 +2,7 @@ let mapleader = " "
 
 set highlightedyank
 set vim-commentary
+set NERDTree
 
 set scrolloff=8
 set relativenumber number
@@ -25,3 +26,5 @@ map <leader>fs <action>(GotoSymbol)
 map <leader>rr <action>(RenameElement)
 map <leader>ri <action>(Inline)
 
+map <leader>vd <action>(ToggleDistractionFreeMode)
+map <leader>fb :NERDTreeToggle<CR>

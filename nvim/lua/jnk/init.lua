@@ -1,3 +1,3 @@
-require("jnk.set")
-require("jnk.packer")
-require("jnk.remap")
+require('jnk.set')
+require('jnk.lazy')
+require('jnk.remap')
