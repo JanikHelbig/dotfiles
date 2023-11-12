@@ -42,3 +42,6 @@ function Deploy-Manifest {
 
 Write-Host "--- Common configs ---"
 Deploy-Manifest MANIFEST
+
+Write-Host "--- Windows configs ---"
+Deploy-Manifest MANIFEST.windows
