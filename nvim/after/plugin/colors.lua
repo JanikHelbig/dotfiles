@@ -22,6 +22,7 @@ require('catppuccin').setup({
     flavour = 'frappe',
     no_italic = true,
     term_colors = true,
+    transparent_background = true,
     integrations = {
         cmp = true,
         treesitter = true,
