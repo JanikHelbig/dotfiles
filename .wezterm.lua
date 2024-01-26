@@ -17,7 +17,7 @@ config.color_scheme = 'Catppuccin Frappe'
 
 -- Font Settings
 config.font = wezterm.font 'JetBrains Mono'
-config.font_size = 15.0
+config.font_size = 12.0
 
 -- Platform Specific Settings
 function string:contains(value)
@@ -27,7 +27,7 @@ end
 local platform = wezterm.target_triple
 if platform:contains 'windows' then
     config.default_prog = { 'pwsh', '--nologo' }
-    config.window_decorations = 'RESIZE'
+    -- config.window_decorations = 'RESIZE'
 elseif platform:contains 'apple' then
 else 
 end
