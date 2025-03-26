@@ -2,7 +2,10 @@ let mapleader = " "
 
 set highlightedyank
 set vim-commentary
+set easymotion
 set NERDTree
+set matchit
+set multiple-cursors
 
 set scrolloff=8
 set relativenumber number
@@ -20,13 +23,35 @@ set hlsearch
 map Q gq
 
 map <leader>c <action>(CommentByLineComment)
+
 map <leader>fa <action>(SearchEverywhere)
 map <leader>ff <action>(GotoFile)
 map <leader>fs <action>(GotoSymbol)
+
 map <leader>rr <action>(RenameElement)
 map <leader>ri <action>(Inline)
 
-map <leader>en <action>(ReSharperGotoNextErrorInSolution)
+if &ide =~? 'rider'
+    map <leader>en <action>(ReSharperGotoNextErrorInSolution)
+elseif &ide =~? 'webstorm'
+    map <leader>en <action>(GotoNextError)
+elseif &ide =~? 'clion'
+    map <leader>en <action>(GotoNextError)
+endif
 
 map <leader>vd <action>(ToggleDistractionFreeMode)
 map <leader>fb :NERDTreeToggle<CR>
+
+map <leader>ta <action>(ActivateTerminalToolWindow)
+
+nmap <C-n> <Plug>NextWholeOccurrence
+xmap <C-n> <Plug>NextWholeOccurrence
+nmap g<C-n> <Plug>NextOccurrence
+xmap g<C-n> <Plug>NextOccurrence
+xmap <C-x> <Plug>SkipOccurrence
+xmap <C-p> <Plug>RemoveOccurrence
+
+nmap <leader><C-n> <Plug>AllWholeOccurrences
+xmap <leader><C-n> <Plug>AllWholeOccurrences
+nmap <leader>g<C-n> <Plug>AllOccurrences
+xmap <leader>g<C-n> <Plug>AllOccurrences
