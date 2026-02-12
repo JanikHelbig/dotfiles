@@ -1,1 +1,3 @@
-require("jnk")
+require("config.options")
+require("config.lazy")
+require("config.godot")
