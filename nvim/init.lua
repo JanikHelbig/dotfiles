@@ -111,11 +111,19 @@ require("lazy").setup({
             lazy = false,
             opts = {
                 -- explorer = { enabled = true },
-                picker = { enabled = true },
+                picker = {
+                    enabled = true
+                },
                 terminal = {
                     enabled = true,
                     shell = is_windows and { 'pwsh', '-NoLogo' } or vim.o.shell,
                 },
+                statuscolumn = {
+                    enabled = true
+                },
+                indent = {
+                    enabled = true
+                }
             },
             keys = {
                 { '<leader><space>',    function() Snacks.picker.smart() end,   desc = 'Smart Find Files' },
@@ -141,6 +149,11 @@ require("lazy").setup({
 })
 
 vim.cmd.colorscheme 'catppuccin'
+
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = { "gdscript" },
+  callback = function() vim.treesitter.start() end,
+})
 
 -- Godot LSP connection
 local root = vim.fs.root(0, 'project.godot')
